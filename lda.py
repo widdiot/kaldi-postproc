@@ -353,7 +353,7 @@ class LDA():
 
 
 def script_reader(scp):
-    reader = ScriptReader(scp)
+    reader = ScriptReader(scp, matrix=False)
     return reader
 
 

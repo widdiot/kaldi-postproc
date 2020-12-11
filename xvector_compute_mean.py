@@ -4,7 +4,7 @@ import numpy as np
 
 
 def script_reader(scp):
-    reader = ScriptReader(scp)
+    reader = ScriptReader(scp, matrix=False)
     return reader
 
 
@@ -25,6 +25,6 @@ if __name__ == "__main__":
         if num_done == 0:
             print("No ivectors read")
         else:
-            mean = sum/num_done
-            with open(args.out+'/mean.npy', 'wb') as f:
+            mean = sum / num_done
+            with open(args.out + '/mean.npy', 'wb') as f:
                 np.save(f, mean)
