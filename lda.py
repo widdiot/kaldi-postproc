@@ -343,8 +343,8 @@ class LDA():
             raise NotImplementedError("transform not implemented for 'lsqr' "
                                       "solver (use 'svd' or 'eigen').")
 
-            if self.solver == 'svd':
-                X_new = np.dot(X - self._xbar, self._scalings)
+        if self.solver == 'svd':
+            X_new = np.dot(X - self._xbar, self._scalings)
         elif self.solver == 'eigen':
             X_new = np.dot(X, self._scalings)
         n_components = X.shape[1] if n_components is None \
